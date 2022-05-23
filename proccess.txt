@@ -1,0 +1,15 @@
+
+
+
+CREATE GOOGLE CLOUD PROJECT :
+https://developers.google.com/workspace/guides/create-project
+
+
+--------------
+ENABLE GOOGLE DRIVE API : 
+https://developers.google.com/workspace/guides/enable-apis
+
+
+--------------
+CREARE CREDENTIALS :
+https://developers.google.com/workspace/guides/create-credentials
