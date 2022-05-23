@@ -1,5 +1,9 @@
-import express from 'express';
+import express from "express";
 
 (() => {
-  console.log("Hello World ! 👋");
+  const app = express();
+
+  app.listen(4000, () => {
+    console.log("🚀 DBSAVER RUNNING ON : http://localhost:4000");
+  });
 })();
