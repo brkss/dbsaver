@@ -8,9 +8,9 @@ interface IFileConfig {
 const DPX_PATH_SUFFIX = "/backup-vanille-fraise";
 
 export const createFileName = (): string => {
-  const suffix = "bkp-vf-";
+  const suffix = "bkp-vf";
 
-  return `${suffix}-${new Date().getTime()}`;
+  return `${suffix}-${new Date().getTime()}.sql`;
 };
 
 export const readFile = (p: string): Buffer => {
