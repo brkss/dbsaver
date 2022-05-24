@@ -28,26 +28,8 @@ const save = () => {
 (() => {
   const app = express();
 
-  save();
-
-  /*
-  const fileconfig = {
-    path: path.join(__dirname, "../test.txt"),
-  };
-
-  dbx
-    .filesUpload({ path: "/test.txt", contents: readFl(fileconfig.path) })
-    .then((res) => {
-      console.log("res => ", res.result);
-    })
-    .catch((e) => {
-      console.log("something went wrong trying to upload file : ", e);
-    });
-
-  readFl(path.join(__dirname, "../test.txt"));
-*/
-  schedule("32 * * * *", () => {
-    console.log("cron job running !");
+  schedule("56 * * * *", () => {
+    save();
   });
 
   app.listen(4001, () => {
