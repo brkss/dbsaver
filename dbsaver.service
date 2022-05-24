@@ -1,0 +1,14 @@
+[Unit]
+Description=dbsaver
+
+[Service]
+ExecStart=/root/opencc.tech/dbsaver/index.js
+Restart=always
+User=nobody
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/root/opencc.tech/dbsaver
+
+[Install]
+WantedBy=multi-user.target
