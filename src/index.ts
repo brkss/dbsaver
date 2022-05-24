@@ -27,7 +27,6 @@ const readFl = (p: string): Buffer => {
     .catch((e) => {
       console.log("something went wrong trying to upload file : ", e);
     });
-  //dbx.filesUpload(arg)
 
   readFl(path.join(__dirname, "../test.txt"));
 
@@ -35,7 +34,7 @@ const readFl = (p: string): Buffer => {
     console.log("cron job running !");
   });
 
-  app.listen(4000, () => {
+  app.listen(4001, () => {
     console.log("🚀 DBSAVER RUNNING ON : http://localhost:4000");
   });
 })();
