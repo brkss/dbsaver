@@ -28,7 +28,7 @@ const save = () => {
 (() => {
   const app = express();
 
-  schedule("56 * * * *", () => {
+  schedule("5 2 * * *", () => {
     save();
   });
 

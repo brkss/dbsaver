@@ -1,15 +1,13 @@
 
+DROPBOX OAUTH : 
+https://www.dropbox.com/developers/documentation/http/documentation#oauth2-authorize
+------
+
+DROPBOX FILE UPLOAD :
+https://stackoverflow.com/questions/45435832/dropbox-api-file-read-upload-node-js
+------
 
 
-CREATE GOOGLE CLOUD PROJECT :
-https://developers.google.com/workspace/guides/create-project
-
-
---------------
-ENABLE GOOGLE DRIVE API : 
-https://developers.google.com/workspace/guides/enable-apis
-
-
---------------
-CREARE CREDENTIALS :
-https://developers.google.com/workspace/guides/create-credentials
+DROPBOX JS SDK :
+https://www.npmjs.com/package/dropbox
+------
