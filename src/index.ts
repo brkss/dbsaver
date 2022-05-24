@@ -4,8 +4,9 @@ import { schedule } from "node-cron";
 //import { Dropbox } from "dropbox";
 //import fs from "fs";
 //import path from "path";
-import { createFileName } from "./file";
+import { createFileName, createFileConfig, readFile } from "./file";
 import { saveDockerSqlFile } from "./execute";
+import path from 'path'
 
 //const dbx = new Dropbox({ accessToken: process.env.ACCESS_TOKEN });
 /*
@@ -16,7 +17,11 @@ const readFl = (p: string): Buffer => {
 */
 const save = () => {
   const filename = createFileName();
+  // save mysql docker container  
   saveDockerSqlFile(filename);
+  const buff = readFile(path.join(__dirname, `backup/${filename}`));
+  const config = createFileConfig(filename, buff);
+
   console.log("✅ DONE !");
 };
 
