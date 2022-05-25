@@ -1,30 +1,18 @@
 import "dotenv/config";
 import express from "express";
 import { schedule } from "node-cron";
-import { Dropbox } from "dropbox";
-import { createFileName, createFileConfig, readFile } from "./file";
+import { createFileName } from "./file";
 import { saveDockerSqlFile } from "./execute";
 import path from "path";
-import { run } from "./drive";
-import { auth } from './auth';
+import { auth } from "./auth";
+import { uploadFile } from "./drive";
 
-const dbx = new Dropbox({ accessToken: process.env.ACCESS_TOKEN });
-
-const save = () => {
+const save = (auth: any) => {
   const filename = createFileName();
   // save mysql docker container
   saveDockerSqlFile(filename);
-  const buff = readFile(path.join(__dirname, `../backup/${filename}`));
-  const config = createFileConfig(filename, buff);
-  dbx
-    .filesUpload({ path: config.dpxpath, contents: config.content })
-    .then((res) => {
-      console.log("res => ", res.result);
-      console.log("✅ DONE !");
-    })
-    .catch((e) => {
-      console.log("something went wrong trying to upload file : ", e);
-    });
+  const p = path.join(__dirname, `../backup/${filename}`);
+  uploadFile(auth, filename, p);
 };
 
 (async () => {
@@ -32,10 +20,11 @@ const save = () => {
 
   //await auth();
   //run();
-  await auth();
+  const AuthClient = await auth();
+  save(AuthClient);
 
   schedule("10 * * * * *", () => {
-    save();
+    //save();
   });
 
   app.listen(4001, () => {
