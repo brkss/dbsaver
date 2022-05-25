@@ -1,20 +1,23 @@
 
-DROPBOX OAUTH : 
-https://www.dropbox.com/developers/documentation/http/documentation#oauth2-authorize
-------
 
-DROPBOX FILE UPLOAD :
-https://stackoverflow.com/questions/45435832/dropbox-api-file-read-upload-node-js
-------
+CREATE GOOGLE CLOUD PROJECT :
+https://developers.google.com/workspace/guides/create-project
 
 
-DROPBOX JS SDK :
-https://www.npmjs.com/package/dropbox
-------
+--------------
+ENABLE GOOGLE DRIVE API : 
+https://developers.google.com/workspace/guides/enable-apis
 
-DROPBOX OAUTH CODE : 
-https://www.dropbox.com/oauth2/authorize?client_id=MY_CLIENT_ID&redirect_uri=MY_REDIRECT_URI&response_type=code
-......
+
+--------------
+CREATE CREDENTIALS :
+https://developers.google.com/workspace/guides/create-credentials
+
+
+---------------
+GOOGLE DRIVE SCOPS :
+https://developers.google.com/identity/protocols/oauth2/scopes
+
 
 BOB MARLEY : https://open.spotify.com/playlist/0NnnXJtgjnzkpdT9BNRlY3
 

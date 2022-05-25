@@ -18,13 +18,10 @@ const save = (auth: any) => {
 (async () => {
   const app = express();
 
-  //await auth();
-  //run();
-  const AuthClient = await auth();
-  save(AuthClient);
-
-  schedule("10 * * * * *", () => {
-    //save();
+  // every day at 10 
+  schedule("* * 10 * * *", async () => {
+    const AuthClient = await auth();
+    save(AuthClient);
   });
 
   app.listen(4001, () => {
