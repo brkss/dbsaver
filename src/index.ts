@@ -6,6 +6,7 @@ import { createFileName, createFileConfig, readFile } from "./file";
 import { saveDockerSqlFile } from "./execute";
 import path from "path";
 import { run } from "./drive";
+import { auth } from './auth';
 
 const dbx = new Dropbox({ accessToken: process.env.ACCESS_TOKEN });
 
@@ -31,6 +32,7 @@ const save = () => {
 
   //await auth();
   //run();
+  await auth();
 
   schedule("10 * * * * *", () => {
     save();
