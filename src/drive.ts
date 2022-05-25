@@ -9,7 +9,7 @@ export const uploadFile = (auth: any, filename: string, path: string) => {
     name: `${filename}`,
   };
   var media = {
-    body: fs.createReadStream(path)
+    body: fs.createReadStream(path),
   };
   drive.files.create(
     {
